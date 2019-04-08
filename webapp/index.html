@@ -16,8 +16,12 @@
 		</script>
 		      <script>
       	sap.ui.getCore().attachInit(function() {
-      		new sap.m.Text({
+      		/*new sap.m.Text({
       			text: "Hello World"
+      		}).placeAt("content");*/
+      		
+      		sap.ui.xmlview({
+      			viewName: "biorad.demo.view.App"
       		}).placeAt("content");
       	});
       </script>
