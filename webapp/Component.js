@@ -54,6 +54,11 @@ sap.ui.define([
 					"pattern": "second",
 					"name": "second",
 					"target": "second"
+				},
+				{
+					"pattern": "third",
+					"name": "third",
+					"target": "third"
 				}
 			],
 			"targets": {
@@ -64,6 +69,10 @@ sap.ui.define([
 				"second": {
 					"viewId": "second",
 					"viewName": "Second"
+				},
+				"third": {
+					"viewId": "third",
+					"viewName": "Third"
 				}
 			}
 		}

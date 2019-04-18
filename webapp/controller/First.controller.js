@@ -9,6 +9,8 @@ sap.ui.define([
 	/*var AppController = */
 	Controller.extend("biorad.demo.controller.First", {
 		onInit: function () {
+			var data = {
+				"currency": "USD"};
 
 		},
 		onAlertButtonPress: function (oEvent) {
