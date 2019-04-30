@@ -9,73 +9,7 @@ sap.ui.define([
   return UIComponent.extend("biorad.demo.Component", {
 
     metadata: {
-      "version": "1.0.0",
-      "rootView": {
-        "viewName": "biorad.demo.view.App",
-        "type": "XML",
-        "id": "app"
-      },
-      "includes": [ "css/style.css"],
-      "dependencies": {
-        "libs": ["sap.ui.core", "sap.m", "sap.ui.layout"]
-      },
-      "config": {
-        "i18nBundle": "biorad.demo.i18n.i18n",
-        /*serviceConfig: {
-          name: "localData",
-          serviceUrle: "/sap/opu/odata/IWPGW/TASKPROCESSING;mo/",
-          detailUrle: "/sap/opu/odata/sap/ZGW_PETTY_CASH_APPR_SRV;mo/",
-          local: true
-        },*/
-        "icon": "",
-        "favIcon": "",
-        "phone": "",
-        "phone@2": "",
-        "tablet": "",
-        "tablet@2": ""
-      },
-      
-      		"routing": {
-			"config": {
-				"routerClass": "sap.m.routing.Router",
-				"viewType": "XML",
-				"viewPath": "biorad.demo.view",
-				"controlId": "app",
-				"controlAggregation": "pages",
-				"async": true
-			},
-			"routes": [
-				{
-					"pattern": "",
-					"name": "first",
-					"target": "first"
-				},
-				{
-					"pattern": "second",
-					"name": "second",
-					"target": "second"
-				},
-				{
-					"pattern": "third",
-					"name": "third",
-					"target": "third"
-				}
-			],
-			"targets": {
-				"first": {
-					"viewId": "first",
-					"viewName": "First"
-				},
-				"second": {
-					"viewId": "second",
-					"viewName": "Second"
-				},
-				"third": {
-					"viewId": "third",
-					"viewName": "Third"
-				}
-			}
-		}
+    	manifest: "json"
     },
 
     /**

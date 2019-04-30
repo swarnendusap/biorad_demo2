@@ -1,0 +1,55 @@
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" controllerName="biorad.demo.controller.Fourth">
+	<Page title="Fourth View Page" showNavButton="true" navButtonPress="onNavBack">
+		<!---->
+		<Panel headerText="Panel: Multiplication Example">
+			<content>
+				<Table id="idAirlineTable" items="{/results}" mode="SingleSelectMaster" selectionChange="rowSelect">
+					<headerToolbar>
+						<Toolbar>
+							<content>
+								<Title text="Airlines" level="H2"/>
+							</content>
+						</Toolbar>
+					</headerToolbar>
+					<infoToolbar>
+						<Toolbar active="ture">
+							<Label text="All the Airlines Code"/>
+						</Toolbar>
+					</infoToolbar>
+					<columns>
+						<Column width="12em">
+							<Text text="Carrier ID"/>
+						</Column>
+						<Column >
+							<Text text="Carrier Name"/>
+						</Column>
+						<Column >
+							<Text text="Currency Code"/>
+						</Column>
+						<Column >
+							<Text text="URL"/>
+						</Column>						
+					</columns>
+					<items>
+						<ColumnListItem>
+							<cells>
+								<Text text="{Carrid}"/>
+								<Text text="{Carrname}"/>
+								<Text text="{Currcode}"/>
+								<Text text="{Url}"/>
+<!--								<ObjectIdentifier title="{Name}" text="{ProductId}"/>
+								<Text text="{SupplierName}"/>
+								<Text text="{Width} x {Depth} x {Height} {DimUnit}"/>
+								<ObjectNumber number="{WeightMeasure}" unit="{WeightUnit}"
+									state="{ parts: [ {path: 'WeightMeasure'}, {path: 'WeightUnit'} ], formatter: 'sap.m.sample.Table.Formatter.weightState' }"/>
+								<ObjectNumber
+									number="{ parts:[{path:'Price'},{path:'CurrencyCode'}], type: 'sap.ui.model.type.Currency', formatOptions: {showMeasure: false} }"
+									unit="{CurrencyCode}"/>-->
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</content>
+		</Panel>
+	</Page>
+</mvc:View>

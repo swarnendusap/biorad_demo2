@@ -1,0 +1,101 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "biorad.demo",
+		"type": "application",
+		"title": "Bio Rad Demo",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"dataSources": {
+			"invoiceRemote": {
+				"uri": "https://services.odata.org/V2/Northwind/Northwind.svc/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": false
+		}
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "biorad.demo.view.App",
+			"type": "XML",
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.52",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"config": {
+			"i18nBundle": "biorad.demo.i18n.i18n",
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "biorad.demo.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"async": true
+			},
+			"routes": [{
+				"pattern": "",
+				"name": "first",
+				"target": "first"
+			}, {
+				"pattern": "second",
+				"name": "second",
+				"target": "second"
+			}, {
+				"pattern": "third",
+				"name": "third",
+				"target": "third"
+			}],
+			"targets": {
+				"first": {
+					"viewId": "first",
+					"viewName": "First"
+				},
+				"second": {
+					"viewId": "second",
+					"viewName": "Second"
+				},
+				"third": {
+					"viewId": "third",
+					"viewName": "Third"
+				}
+			}
+		},
+		"models": {
+			"invoiceR": "invoiceRemote",
+			"invoiceL": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "invoices.json"
+			}
+		},
+		"contentDensities": {
+			"compact": false,
+			"cozy": true
+		},
+		"flexEnabled": true
+	}
+}

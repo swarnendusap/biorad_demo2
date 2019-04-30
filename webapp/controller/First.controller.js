@@ -24,8 +24,12 @@ sap.ui.define([
 			});*/
 		},
 		onNextBtnPrs: function (oEvent) {
+			var sId = "AC";
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			oRouter.navTo("second");
+			oRouter.navTo("fourth", {
+				carId: "AC"
+			}, true);
+			
 		}
 	});
 
